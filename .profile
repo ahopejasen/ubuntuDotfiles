@@ -29,4 +29,3 @@ if [ -d "$HOME/zotero" ] ; then
     PATH="$HOME/zotero:$PATH"
 fi
 
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)

@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -90,7 +90,6 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ltr='ls -ltr'
 
-alias octavegui='/opt/octave3.8/bin/octave --force-gui'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -115,7 +114,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-alias rsync-combatives-libertas="rsync -avLz --progress -e ssh --delete --exclude '.git' /home/hopey/Videos/GracieCombatives libertasv:/usr/local/www/apache24/data"
 
 #keep dotfiles in bare git repo: https://news.ycombinator.com/item?id=11071754
 alias dotfiles='/usr/bin/git --git-dir=/home/hopey/.dotfiles/ --work-tree=/home/hopey'
